@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #c8c8c8;
+}
+
+.logo {
+    max-width: 6rem;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
+.nav-list li a img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+.nav-list li a img:hover {
+  transform: scale(1.2);       /* agranda al pasar el mouse */
+}
+
+.menu-abierto {
+    position:fixed;
+    top:0;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    transition: right 0.3s ease;
+    padding: 2rem;
+}
+
+.menu-abierto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-abierto ul li {
+  margin: 1rem 0;
+}
+
+.menu-abierto ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* Cuando está activo */
+.menu-abierto.activo {
+  right: 0; /* se despliega cubriendo media pantalla */
+}
